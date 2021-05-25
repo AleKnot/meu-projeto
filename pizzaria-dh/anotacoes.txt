@@ -1,0 +1,14 @@
+Iniciar um projeto
+npm init -y
+
+instalar o nodemon
+npm install --save-dev nodemon
+Criar arquivo index.js
+
+criar um script no arquivo no packge.json
+  "scripts": {
+    "dev" : "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  
