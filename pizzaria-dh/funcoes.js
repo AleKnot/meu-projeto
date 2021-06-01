@@ -43,6 +43,14 @@ function adicionarPizza(sabor,categoria,preco){
 
 }
 
+const procurarPizzaPeloNome = function (nomePizza) {
+    const pizzaEncontrada = pizzas.find((pizza) => pizza.sabor == nomePizza);
+
+    if(!pizzaEncontrada) return `A pizza sabor ${nomePizza} não foi encontrada`
+
+    return pizzaEncontrada
+}
+
 //editar
 
 //excluir
@@ -89,7 +97,8 @@ function listarTodasAsPizzas(){
 
 module.exports = {
     listarTodasAsPizzas,
-    adicionarPizza
+    adicionarPizza,
+    procurarPizzaPeloNome
     
 
 }

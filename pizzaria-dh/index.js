@@ -11,5 +11,8 @@ pizzaria.adicionarPizza("Marguerita","Salgada",28.20);
 //console.log(pizzaria.listarTodasAsPizzas())
 pizzaria.listarTodasAsPizzas()
 
+//funcao que nos passavamos o sabor e retorna o objeto dessa pizza
 
 
+const t = pizzaria.procurarPizzaPeloNome("Marguerita")
+console.log(t)
