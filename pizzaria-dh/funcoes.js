@@ -74,6 +74,13 @@ function listarTodasAsPizzas(){
 
 };
 
+
+app.get('/pizzas', (req, res) => {
+    return res.json(pizzas)
+
+})
+
+
 app.listen(3000, () => console.log('O Servidor ta on pae!!!'))
 
 module.exports = {
