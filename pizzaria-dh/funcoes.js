@@ -1,31 +1,10 @@
-//arquivo destinado a armazenar as funções do sistema
-const pizzas = [
-    {
-        id: 1,
-        sabor: "Quatro Queijos",
-        categoria: "Salgada",
-        preco: 15.89
-    },
-    {
-        id: 2,
-        sabor: "Morango com Nutella",
-        categoria: "Doce",
-        preco: 30.50
-    },
-    {
-        id: 3,
-        sabor: "Brócolis",
-        categoria: "Vegetariana",
-        preco: 35
-    },
-    {
-        id: 4,
-        sabor: "Lombo Canadense",
-        categoria: "Salgada",
-        preco: 25
-    }
+//importar express
+const express = require('express')
+const app = express()
 
-]
+
+//arquivo destinado a armazenar as funções do sistema
+const pizzas = require('./database/pizzas.json')
 
 //adicionar
 
@@ -94,6 +73,8 @@ function listarTodasAsPizzas(){
     console.log(conteudo)
 
 };
+
+app.listen(3000, () => console.log('O Servidor ta on pae!!!'))
 
 module.exports = {
     listarTodasAsPizzas,
