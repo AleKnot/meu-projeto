@@ -1,6 +1,7 @@
 //importar express
 const express = require('express')
 const app = express()
+app.use(express.json());
 
 
 //arquivo destinado a armazenar as funções do sistema
@@ -79,6 +80,26 @@ app.get('/pizzas', (req, res) => {
     return res.json(pizzas)
 
 })
+
+//Criar uma rota para registrar uma nova pizza, utilizem o método http correto, adicione no array de pizzas e retorne essa nova pizza como json.
+//IMPORTANTE: A nova pizza precisa ter id
+app.post('/adicionarpizza', (req,res) => {
+
+    //const { id } = req.params;
+    const {sabor, categoria, preco } = req.body;
+    console.log(sabor)
+    console.log(categoria)
+    console.log(preco)
+
+    adicionarPizza(sabor,categoria,preco)
+
+    console.log()
+
+    res.json('Pizza adicionada com sucesso')
+
+})
+
+
 
 
 app.listen(3000, () => console.log('O Servidor ta on pae!!!'))
